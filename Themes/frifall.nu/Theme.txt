@@ -1,0 +1,7 @@
+Name: frifall.nu
+Author: Victor Stodell
+Website: http://www.frifall.nu
+Description: Custom theme for frifall.nu
+Version: 0.1
+BaseTheme: PJS.Bootstrap
+Tags: Bootstrap, Custom
