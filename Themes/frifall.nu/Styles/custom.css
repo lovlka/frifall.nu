@@ -10,3 +10,7 @@ html.sticky-footer #layout-footer hr {
 html.sticky-footer #layout-footer * {
     color:  #fff;
 }
+
+html.sticky-footer #layout-footer em {
+    color:  #888;
+}
