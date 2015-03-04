@@ -1,4 +1,11 @@
-﻿$(document).ready(function () {
+﻿function adjustFooter() {
+    if ($('html').hasClass('sticky-footer')) {
+        var footerHeight = parseInt($('#layout-footer').css('height')) + 20;
+        $('body').css('margin-bottom', footerHeight + 'px');
+    }
+}
+
+$(document).ready(function () {
     // NAVIGATION
     // change submenu arrow
     $('.dropdown-menu i').removeClass('fa-angle-down').addClass('fa-angle-right').addClass('pull-right');
@@ -12,11 +19,8 @@
     $('.navbar-wrapper .navbar-fixed-top').parent('div').next('div').css('margin-top', ($('.navbar-fixed-top').height()) + 'px');
 
     // add bottom margin to body equal to the footer height when using sticky footer
-    if ($('html').hasClass('sticky-footer')) {
-        var footerHeight = $('#layout-footer').height();
-
-        $('body').css('margin-bottom', footerHeight + 'px');
-    }
+    $(window).resize(adjustFooter);
+    adjustFooter();
 
     // ALERTS
     $('.alert').alert();
