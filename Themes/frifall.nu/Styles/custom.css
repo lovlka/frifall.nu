@@ -2,15 +2,21 @@ html.sticky-footer #layout-footer {
     background-color: #333;
     padding: 20px;
 }
-
 html.sticky-footer #layout-footer hr {
     display: none;
 }
-
 html.sticky-footer #layout-footer * {
     color:  #fff;
 }
-
 html.sticky-footer #layout-footer em {
     color:  #888;
+}
+a:not(.btn), a:not(.btn):link, a:not(.btn):visited {
+    color: #e99002;
+}
+a:not(.btn):hover, a:not(.btn):focus {
+    color: #b67102;
+}
+.navbar-brand {
+    color: #fff !important;
 }
