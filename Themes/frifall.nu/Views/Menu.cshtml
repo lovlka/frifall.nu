@@ -32,15 +32,19 @@
 
     <ul class="nav navbar-nav navbar-right">
         @if (WorkContext.CurrentUser != null) {
-            dynamic user = WorkContext.CurrentUser.ContentItem;
+            dynamic item = WorkContext.CurrentUser.ContentItem;
+            var displayName = item.User.Name.Value != null ? item.User.Name.Value : WorkContext.CurrentUser.UserName;
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>&nbsp;@Html.ItemDisplayText(WorkContext.CurrentUser)&nbsp;<i class="fa fa-angle-down"></i></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>&nbsp;@displayName&nbsp;<i class="fa fa-angle-down"></i></a>
                 <ul class="dropdown-menu">
                     @if (AuthorizedFor(Orchard.Security.StandardPermissions.AccessAdminPanel)) {
                         <li>
                             @Html.ActionLink(T("Dashboard").ToString(), "Index", new { Area = "Dashboard", Controller = "Admin" })
                         </li>
                     }
+                    <li>
+                        @Html.ActionLink(T("Edit Profile").ToString(), "Edit", new { Controller = "Home", Area = "Contrib.Profile" })
+                    </li>
                     <li>
                         @Html.ActionLink(T("Change Password").ToString(), "ChangePassword", new { Controller = "Account", Area = "Orchard.Users" })
                     </li>
