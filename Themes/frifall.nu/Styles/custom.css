@@ -20,3 +20,6 @@ a:not(.btn):hover, a:not(.btn):focus {
 .navbar-brand {
     color: #fff !important;
 }
+table {
+    font-size: inherit;
+}
