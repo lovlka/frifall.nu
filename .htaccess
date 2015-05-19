@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteBase /
+RewriteCond %{HTTP_HTTPS} !=on
+RewriteRule ^(.*)$ https://%{SERVER_NAME}/$1 [R=301,L]
