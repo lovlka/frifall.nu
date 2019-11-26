@@ -23,3 +23,33 @@ a:not(.btn):hover, a:not(.btn):focus {
 table {
     font-size: inherit;
 }
+
+#cliento-booking .cb-service-item p,
+#cliento-booking .cb-details span,
+#cliento-booking .cb-note-info,
+#cliento-booking .cb-extra-info {
+    color: #000;
+}
+#cliento-booking .cb-nav-item.active,
+#cliento-booking .cb-button,
+#cliento-booking button[type=button].cb-button,
+#cliento-booking button[type=submit].cb-button {
+    background: #e99002;
+    box-shadow: none;
+}
+#cliento-booking .cb-slot strong,
+#cliento-booking .cb-slot:link strong,
+#cliento-booking .cb-slot:hover strong,
+#cliento-booking .cb-slot:visited strong {
+    color: #e99002;
+}
+#cliento-booking .cb-slot:hover {
+    border-color: #e99002;
+}
+#cliento-booking label {
+    font-size: 14px;
+}
+#cliento-booking .cb-checkbox.checked {
+    background: #e99002;
+    border-color: #e99002;
+}
